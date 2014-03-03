@@ -13,7 +13,6 @@ class yumrepos::percona {
     enabled    => '1',
     gpgcheck   => '1',
     gpgkey     => "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-percona",
-    exclude    => "Percona-Server*",
     require    => File['/etc/pki/rpm-gpg/RPM-GPG-KEY-percona'],
   }
 }
