@@ -14,7 +14,7 @@ Usage
 or
 ```
 "require => Class['yumrepos::ius']"
-qqq
+```
 
 or
 ```
