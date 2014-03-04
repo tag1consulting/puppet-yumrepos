@@ -4,6 +4,17 @@ yumrepos puppet modules
 Yum repo definitions for enterprise linux (RHEL/CentOS)
 Each repo to manage is handled in its own class.
 
+Currently includes repo definitions for:
+* Drupal Drush 5
+* Drupal Drush 6
+* EPEL
+* IUS Community
+* Jenkins
+* Jpackage
+* Percona
+* PuppetLabs
+* Varnish 3
+
 
 Usage
 -----
