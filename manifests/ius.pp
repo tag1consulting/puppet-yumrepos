@@ -1,4 +1,10 @@
-class yumrepos::ius {
+class yumrepos::ius (
+  $ius_url = $yumrepos::params::ius_url,
+  $ius_enabled = $yumrepos::params::ius_enabled,
+  $ius_gpgcheck = $yumrepos::params::ius_gpgcheck,
+  $ius_includepkgs = $yumrepos::params::ius_includepkgs,
+  $ius_exclude = $yumrepos::params::ius_exclude,
+) inherits yumrepos::params {
   file { "/etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY":
     ensure => present,
     owner  => root,
@@ -8,11 +14,13 @@ class yumrepos::ius {
   }
 
   yumrepo { 'ius':
-    descr      => 'IUS',
-    baseurl    => "http://dl.iuscommunity.org/pub/ius/stable/Redhat/${::operatingsystemmajrelease}/${::architecture}",
-    enabled    => '1',
-    gpgcheck   => '1',
-    gpgkey     => "file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY",
-    require    => [ Class['yumrepos::epel'], File['/etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY'] ],
+    descr       => 'IUS',
+    baseurl     => $ius_url,
+    enabled     => $ius_enabled,
+    includepkgs => $ius_includepkgs,
+    exclude     => $ius_exclude,
+    gpgcheck    => $ius_gpgcheck,
+    gpgkey      => "file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY",
+    require     => [ Class['yumrepos::epel'], File['/etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY'] ],
   }
 }

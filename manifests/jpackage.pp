@@ -1,4 +1,10 @@
-class yumrepos::jpackage {
+class yumrepos::jpackage (
+  $jpackage_mirrorlist = $yumrepos::params::jpackage_mirrorlist,
+  $jpackage_enabled = $yumrepos::params::jpackage_enabled,
+  $jpackage_gpgcheck = $yumrepos::params::jpackage_gpgcheck,
+  $jpackage_includepkgs = $yumrepos::params::jpackage_includepkgs,
+  $jpackage_exclude = $yumrepos::params::jpackage_exclude,
+) inherits yumrepos::params {
   $yum_jpackage_gpg = '/etc/pki/rpm-gpg/jpackage.asc'
 
   file { $yum_jpackage_gpg:
@@ -10,10 +16,13 @@ class yumrepos::jpackage {
   }
 
   yumrepo { 'jpackage':
-    descr      => 'JPackage Generic',
-    mirrorlist => 'http://www.jpackage.org/mirrorlist.php?dist=generic&type=free&release=6.0',
-    gpgcheck   => 1,
-    gpgkey     => "file://${yum_jpackage_gpg}",
-    require    => File[$yum_jpackage_gpg],
+    descr       => 'JPackage 6.0 Generic',
+    mirrorlist  => $jpackage_mirrorlist,
+    enabled     => $jpackage_enabled,
+    includepkgs => $jpackage_includepkgs,
+    exclude     => $jpackage_exclude,
+    gpgcheck    => $jpackage_gpgcheck,
+    gpgkey      => "file://${yum_jpackage_gpg}",
+    require     => File[$yum_jpackage_gpg],
   }
 }
