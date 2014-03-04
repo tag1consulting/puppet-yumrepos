@@ -1,0 +1,2 @@
+# Exclude puppet forge packaging directory
+pkg/
