@@ -18,9 +18,10 @@ Switching 'ius' with whichever repo you would like to enable for the host.
 
 General Information
 -------------------
-RPM GPG keys are installed and enabled for repos where available. Will be moving
-these to parameterized classes to allow easy override of baseurl and potentially
-other settings.
+RPM GPG keys are installed and enabled for repos where available.
+
+Most settings are in parameters (defaults included via params.pp) so that things
+can be easily overridden from calling classes, Hiera, etc.
 
 
 Requirements
