@@ -7,13 +7,36 @@ Each repo to manage is handled in its own class.
 
 Usage
 -----
+```
 "include yumrepos::ius"
+```
+
 or
+```
 "require => Class['yumrepos::ius']"
+qqq
+
 or
+```
 "class { 'yumrepos::ius': }"
+```
 
 Switching 'ius' with whichever repo you would like to enable for the host.
+
+
+Optional Parameters
+-------------------
+Additional configuration can be made through class parameters. Each yumrepos class
+accepts multiple parameters to override options such as URL, enabled, package includes/excludes,
+and enabling of gpg checks. Defaults are defined in params.pp for each repo.
+
+Example:
+```
+class { 'yumrepos::epel':
+          epel_url => 'http://your.local.mirror.com/epel/',
+          epel_exclude => 'some packages to avoid',
+      }
+```
 
 
 General Information
