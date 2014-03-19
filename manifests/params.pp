@@ -57,10 +57,10 @@ class yumrepos::params {
   $varnish3_includepkgs = absent
   $varnish3_exclude = absent
 
-  # RPMForge Settings.
-  $rpmforge_url = "http://apt.sw.be/redhat/el${::operatingsystemmajrelease}/en/${::architecture}/rpmforge"
-  $rpmforge_enabled = '1'
-  $rpmforge_gpgcheck = '1'
-  $rpmforge_includepkgs = absent
-  $rpmforge_exclude = absent
+  # repoforge Settings. repoforge used to be called rpmforge
+  $repoforge_url = "http://apt.sw.be/redhat/el${::operatingsystemmajrelease}/en/${::architecture}/rpmforge"
+  $repoforge_enabled = '1'
+  $repoforge_gpgcheck = '1'
+  $repoforge_includepkgs = absent
+  $repoforge_exclude = absent
 }
