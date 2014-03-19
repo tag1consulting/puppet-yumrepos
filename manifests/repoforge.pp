@@ -6,6 +6,13 @@ class yumrepos::repoforge (
   $repoforge_exclude = $yumrepos::params::repoforge_exclude,
 ) inherits yumrepos::params {
 
+  file { "/etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag":
+    owner  => root,
+    group  => root,
+    mode   => 0644,
+    source => "puppet:///modules/yumrepos/etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag",
+  }
+
   yumrepo { 'repoforge':
     descr       => 'repoforge',
     baseurl     => $repoforge_url,
@@ -13,5 +20,8 @@ class yumrepos::repoforge (
     includepkgs => $repoforge_includepkgs,
     exclude     => $repoforge_exclude,
     gpgcheck    => $repoforge_gpgcheck,
+    gpgkey      => "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag",
   }
+
 }
+
