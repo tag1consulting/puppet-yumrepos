@@ -46,6 +46,7 @@ Example:
 class { 'yumrepos::epel':
           epel_url => 'http://your.local.mirror.com/epel/',
           epel_exclude => 'some packages to avoid',
+          epel_includepkgs => 'comma-separated packages to include',
       }
 ```
 
