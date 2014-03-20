@@ -13,6 +13,7 @@ Currently includes repo definitions for:
 * Jpackage
 * Percona
 * PuppetLabs
+* RepoForge
 * Varnish 3
 
 
