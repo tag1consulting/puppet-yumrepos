@@ -20,7 +20,7 @@ class yumrepos::jenkins (
     enabled     => $jenkins_enabled,
     includepkgs => $jenkins_includepkgs,
     exclude     => $jenkins_exclude,
-    gpgcheck    => $jenkins_gpgcheck
+    gpgcheck    => $jenkins_gpgcheck,
     gpgkey      => "file:///etc/pki/rpm-gpg/jenkins-ci.org.key",
     require     => File['/etc/pki/rpm-gpg/jenkins-ci.org.key'],
   }
