@@ -57,10 +57,24 @@ class yumrepos::params {
   $varnish3_includepkgs = absent
   $varnish3_exclude = absent
 
-  # repoforge Settings. repoforge used to be called rpmforge
+  # Repoforge Settings.
   $repoforge_url = "http://apt.sw.be/redhat/el${::operatingsystemmajrelease}/en/${::architecture}/rpmforge"
   $repoforge_enabled = '1'
   $repoforge_gpgcheck = '1'
   $repoforge_includepkgs = absent
   $repoforge_exclude = absent
+
+  # Drush5 Settings.
+  $drush5_url = "http://pkg.tag1consulting.com/drush/drush-5/el${::operatingsystemmajrelease}/noarch"
+  $drush5_enabled = '1'
+  $drush5_includepkgs = absent
+  $drush5_exclude = absent
+  $drush5_gpgcheck = '1'
+
+  # Drush6 Settings.
+  $drush6_url = "http://pkg.tag1consulting.com/drush/drush-6/el${::operatingsystemmajrelease}/noarch"
+  $drush6_enabled = '1'
+  $drush6_includepkgs = absent
+  $drush6_exclude = absent
+  $drush6_gpgcheck = '1'
 }
