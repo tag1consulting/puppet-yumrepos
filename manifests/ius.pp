@@ -4,6 +4,11 @@ class yumrepos::ius (
   $ius_gpgcheck = $yumrepos::params::ius_gpgcheck,
   $ius_includepkgs = $yumrepos::params::ius_includepkgs,
   $ius_exclude = $yumrepos::params::ius_exclude,
+  $ius_archive_url = $yumrepos::params::ius_archive_url,
+  $ius_archive_enabled = $yumrepos::params::ius_archive_enabled,
+  $ius_archive_gpgcheck = $yumrepos::params::ius_archive_gpgcheck,
+  $ius_archive_includepkgs = $yumrepos::params::ius_archive_includepkgs,
+  $ius_archive_exclude = $yumrepos::params::ius_archive_exclude,
 ) inherits yumrepos::params {
   file { "/etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY":
     ensure => present,
@@ -20,6 +25,17 @@ class yumrepos::ius (
     includepkgs => $ius_includepkgs,
     exclude     => $ius_exclude,
     gpgcheck    => $ius_gpgcheck,
+    gpgkey      => "file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY",
+    require     => [ Class['yumrepos::epel'], File['/etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY'] ],
+  }
+
+  yumrepo { 'ius-archive':
+    descr       => 'IUS Archive',
+    baseurl     => $ius_archive_url,
+    enabled     => $ius_archive_enabled,
+    includepkgs => $ius_archive_includepkgs,
+    exclude     => $ius_archive_exclude,
+    gpgcheck    => $ius_archive_gpgcheck,
     gpgkey      => "file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY",
     require     => [ Class['yumrepos::epel'], File['/etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY'] ],
   }

@@ -14,6 +14,13 @@ class yumrepos::params {
   $ius_includepkgs = absent
   $ius_exclude = absent
 
+  # IUS Archive Settings.
+  $ius_archive_url = "http://dl.iuscommunity.org/pub/ius/archive/Redhat/${::operatingsystemmajrelease}/${::architecture}"
+  $ius_archive_enabled = '0'
+  $ius_archive_gpgcheck = '1'
+  $ius_archive_includepkgs = absent
+  $ius_archive_exclude = absent
+
   # Jenkins Settings.
   $jenkins_url = 'http://pkg.jenkins-ci.org/redhat/'
   $jenkins_enabled = '1'
