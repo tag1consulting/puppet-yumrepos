@@ -8,7 +8,7 @@ Currently includes repo definitions for:
 * Drupal Drush 5
 * Drupal Drush 6
 * EPEL
-* IUS Community
+* IUS Community (Optionally: IUS Community Archive)
 * Jenkins
 * Jpackage
 * Percona
