@@ -77,4 +77,11 @@ class yumrepos::params {
   $drush6_includepkgs = absent
   $drush6_exclude = absent
   $drush6_gpgcheck = '1'
+
+  # Zabbix Settings.
+  $zabbix_url = "http://repo.zabbix.com/zabbix/2.4/rhel/${::operatingsystemmajrelease}/${::architecture}"
+  $zabbix_enabled = '1'
+  $zabbix_gpgcheck = '1'
+  $zabbix_includepkgs = absent
+  $zabbix_exclude = absent
 }
