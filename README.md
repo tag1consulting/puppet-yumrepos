@@ -15,7 +15,7 @@ Currently includes repo definitions for:
 * PuppetLabs
 * RepoForge
 * Varnish 3
-
+* Zabbix 2.4
 
 Usage
 -----
