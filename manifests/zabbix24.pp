@@ -1,9 +1,9 @@
-class yumrepos::zabbix (
-  $zabbix_url = $yumrepos::params::zabbix_url,
-  $zabbix_enabled = $yumrepos::params::zabbix_enabled,
-  $zabbix_gpgcheck = $yumrepos::params::zabbix_gpgcheck,
-  $zabbix_includepkgs = $yumrepos::params::zabbix_includepkgs,
-  $zabbix_exclude = $yumrepos::params::zabbix_exclude,
+class yumrepos::zabbix24 (
+  $zabbix24_url = $yumrepos::params::zabbix24_url,
+  $zabbix24_enabled = $yumrepos::params::zabbix24_enabled,
+  $zabbix24_gpgcheck = $yumrepos::params::zabbix24_gpgcheck,
+  $zabbix24_includepkgs = $yumrepos::params::zabbix24_includepkgs,
+  $zabbix24_exclude = $yumrepos::params::zabbix24_exclude,
 ) inherits yumrepos::params {
 
   file { "/etc/pki/rpm-gpg/RPM-GPG-KEY-ZABBIX":
@@ -16,11 +16,11 @@ class yumrepos::zabbix (
 
   yumrepo { 'zabbix':
     descr       => 'ZABBIX',
-    baseurl     => $zabbix_url,
-    enabled     => $zabbix_enabled,
-    gpgcheck    => $zabbix_gpgcheck,
-    includepkgs => $zabbix_includepkgs,
-    exclude     => $zabbix_exclude,
+    baseurl     => $zabbix24_url,
+    enabled     => $zabbix24_enabled,
+    gpgcheck    => $zabbix24_gpgcheck,
+    includepkgs => $zabbix24_includepkgs,
+    exclude     => $zabbix24_exclude,
     gpgkey      => "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ZABBIX",
     require     => File["/etc/pki/rpm-gpg/RPM-GPG-KEY-ZABBIX"],
   }
