@@ -15,7 +15,7 @@ Currently includes repo definitions for the following yum repos (class names in 
 * PuppetLabs (yumrepos::puppetlabs)
 * RepoForge (yumrepos::repoforge)
 * Varnish 3 (yumrepos::varnish3)
-* Zabbix 2.4
+* Zabbix 2.4 (yumrepos::zabbix24)
 
 Usage
 -----
