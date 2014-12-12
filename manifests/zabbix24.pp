@@ -15,7 +15,7 @@ class yumrepos::zabbix24 (
   }
 
   yumrepo { 'zabbix':
-    descr       => 'ZABBIX',
+    descr       => 'Zabbix 2.4 Official Repository',
     baseurl     => $zabbix24_url,
     enabled     => $zabbix24_enabled,
     gpgcheck    => $zabbix24_gpgcheck,
