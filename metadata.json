@@ -3,12 +3,35 @@
   "version": "0.4.1",
   "author": "Jeff Sheltren",
   "summary": "Yum repo definitions for common repos (RHEL/CentOS).",
-  "license": "BSD",
+  "license": "BSD 3-Clause",
   "source": "git@github.com:tag1consulting/puppet-yumrepos.git",
   "project_page": "https://github.com/tag1consulting/puppet-yumrepos",
   "issues_url": "https://github.com/tag1consulting/puppet-yumrepos/issues",
   "description": "Provides multiple \"yumrepos::reponame\" classes used to create yum repos on CentOS/RHEL systems. Classes are parameterized so that common options are easily configurable with hiera. Includes GPG keys for repos where available.",
   "dependencies": [
   
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    }
   ]
 }
