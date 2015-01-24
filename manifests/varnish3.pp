@@ -1,3 +1,7 @@
+# Class: yumrepos::varnish3
+#
+# Installs the Varnish 3.x yum repository.
+#
 class yumrepos::varnish3 (
   $varnish3_url = $yumrepos::params::varnish3_url,
   $varnish3_enabled = $yumrepos::params::varnish3_enabled,

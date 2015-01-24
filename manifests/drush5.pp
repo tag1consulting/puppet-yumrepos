@@ -1,3 +1,7 @@
+# Class: yumrepos::drush5
+#
+# Installs the Drush 5.x yum repository.
+#
 class yumrepos::drush5 (
   $drush5_url = $yumrepos::params::drush5_url,
   $drush5_enabled = $yumrepos::params::drush5_enabled,
@@ -6,12 +10,12 @@ class yumrepos::drush5 (
   $drush5_exclude = $yumrepos::params::drush5_exclude,
 ) inherits yumrepos::params {
 
-  file { "/etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1":
+  file { '/etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1':
     ensure => present,
     owner  => root,
     group  => root,
-    mode   => 0644,
-    source => "puppet:///modules/yumrepos/etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1",
+    mode   => '0644',
+    source => 'puppet:///modules/yumrepos/etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1',
   }
 
   yumrepo { 'tag1-drush5':
@@ -21,7 +25,7 @@ class yumrepos::drush5 (
     includepkgs => $drush5_includepkgs,
     exclude     => $drush5_exclude,
     gpgcheck    => $drush5_gpgcheck,
-    gpgkey      => "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1",
+    gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1',
     require     => File['/etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1'],
   }
 
