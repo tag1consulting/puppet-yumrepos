@@ -1,3 +1,7 @@
+# Class: yumrepos::epel
+#
+# Installs the EPEL yum repository.
+#
 class yumrepos::epel (
   $epel_url = $yumrepos::params::epel_url,
   $epel_enabled = $yumrepos::params::epel_enabled,
@@ -10,7 +14,7 @@ class yumrepos::epel (
     ensure => present,
     owner  => root,
     group  => root,
-    mode   => 0644,
+    mode   => '0644',
     source => "puppet:///modules/yumrepos/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-${::operatingsystemmajrelease}",
   }
 

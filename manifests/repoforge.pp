@@ -1,3 +1,7 @@
+# Class: yumrepos::repoforge
+#
+# Installs the Repoforge (formerly RPMForge / Dag) yum repository.
+#
 class yumrepos::repoforge (
   $repoforge_url = $yumrepos::params::repoforge_url,
   $repoforge_enabled = $yumrepos::params::repoforge_enabled,
@@ -6,11 +10,11 @@ class yumrepos::repoforge (
   $repoforge_exclude = $yumrepos::params::repoforge_exclude,
 ) inherits yumrepos::params {
 
-  file { "/etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag":
+  file { '/etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag':
     owner  => root,
     group  => root,
-    mode   => 0644,
-    source => "puppet:///modules/yumrepos/etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag",
+    mode   => '0644',
+    source => 'puppet:///modules/yumrepos/etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag',
   }
 
   yumrepo { 'repoforge':
@@ -20,7 +24,7 @@ class yumrepos::repoforge (
     includepkgs => $repoforge_includepkgs,
     exclude     => $repoforge_exclude,
     gpgcheck    => $repoforge_gpgcheck,
-    gpgkey      => "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag",
+    gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag',
   }
 
 }
