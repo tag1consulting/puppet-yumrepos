@@ -51,6 +51,20 @@ class { 'yumrepos::epel':
       }
 ```
 
+Example Using Hiera
+-------------------
+This example shows how you can configure the yumrepos classes using Hiera.
+
+Hiera yaml configuration file (common, per-host, or whatever you have setup in your case):
+```
+yumrepos::epel::epel_url: 'http://your.local.mirror.com/epel/'
+yumrepos::epel::epel_exclude: 'drupal*'
+```
+
+And then the class can be called from your puppet manifests without having to pass any of the parameters:
+```
+class { 'yumrepos::epel': }
+```
 
 General Information
 -------------------
