@@ -26,21 +26,21 @@ class yumrepos::elrepo (
   }
 
   yumrepo { 'elrepo-testing':
-    enabled    => $enabled_testing,
+    enabled    => $elrepo_enabled,
     descr      => "ELRepo.org Community Enterprise Linux Testing Repository - el${::operatingsystemmajrelease}",
     baseurl    => "http://elrepo.org/linux/testing/el${::operatingsystemmajrelease}/\$basearch/",
     mirrorlist => "http://elrepo.org/mirrors-elrepo-testing.el${::operatingsystemmajrelease}",
   }
 
   yumrepo { 'elrepo-kernel':
-    enabled    => $enabled_kernel,
+    enabled    => $elrepo_enabled,
     descr      => "ELRepo.org Community Enterprise Linux Kernel Repository - el${::operatingsystemmajrelease}",
     baseurl    => "http://elrepo.org/linux/kernel/el${::operatingsystemmajrelease}/\$basearch/",
     mirrorlist => "http://elrepo.org/mirrors-elrepo-kernel.el${::operatingsystemmajrelease}",
   }
 
   yumrepo { 'elrepo-extras':
-    enabled    => $enabled_extras,
+    enabled    => $elrepo_enabled,
     descr      => "ELRepo.org Community Enterprise Linux Extras Repository - el${::operatingsystemmajrelease}",
     baseurl    => "http://elrepo.org/linux/extras/el${::operatingsystemmajrelease}/\$basearch/",
     mirrorlist => "http://elrepo.org/mirrors-elrepo-extras.el${::operatingsystemmajrelease}",
