@@ -23,7 +23,6 @@ class yumrepos::elrepo (
     descr      => "ELRepo.org Community Enterprise Linux Repository - el${::operatingsystemmajrelease}",
     baseurl    => "http://elrepo.org/linux/elrepo/el${::operatingsystemmajrelease}/\$basearch/",
     mirrorlist => "http://elrepo.org/mirrors-elrepo.el${::operatingsystemmajrelease}",
-    protect    => 0,
   }
 
   yumrepo { 'elrepo-testing':
@@ -31,7 +30,6 @@ class yumrepos::elrepo (
     descr      => "ELRepo.org Community Enterprise Linux Testing Repository - el${::operatingsystemmajrelease}",
     baseurl    => "http://elrepo.org/linux/testing/el${::operatingsystemmajrelease}/\$basearch/",
     mirrorlist => "http://elrepo.org/mirrors-elrepo-testing.el${::operatingsystemmajrelease}",
-    protect    => 0,
   }
 
   yumrepo { 'elrepo-kernel':
@@ -39,7 +37,6 @@ class yumrepos::elrepo (
     descr      => "ELRepo.org Community Enterprise Linux Kernel Repository - el${::operatingsystemmajrelease}",
     baseurl    => "http://elrepo.org/linux/kernel/el${::operatingsystemmajrelease}/\$basearch/",
     mirrorlist => "http://elrepo.org/mirrors-elrepo-kernel.el${::operatingsystemmajrelease}",
-    protect    => 0,
   }
 
   yumrepo { 'elrepo-extras':
@@ -47,6 +44,5 @@ class yumrepos::elrepo (
     descr      => "ELRepo.org Community Enterprise Linux Extras Repository - el${::operatingsystemmajrelease}",
     baseurl    => "http://elrepo.org/linux/extras/el${::operatingsystemmajrelease}/\$basearch/",
     mirrorlist => "http://elrepo.org/mirrors-elrepo-extras.el${::operatingsystemmajrelease}",
-    protect    => 0;
   }
 }
