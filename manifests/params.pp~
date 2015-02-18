@@ -7,36 +7,6 @@ class yumrepos::params {
   $epel_includepkgs = absent
   $epel_exclude = absent
 
-  # ELREPO Settings.
-  # ELREPO has four repos, "main", "testing", "kernel" and "extras".
-  $elrepo_main_url = "http://elrepo.org/linux/elrepo/el${::operatingsystemmajrelease}/${::architecture}"
-  $elrepo_main_mirrors = "http://elrepo.org/mirrors-elrepo.el${::operatingsystemmajrelease}"
-  $elrepo_main_enabled = '1'
-  $elrepo_main_gpgcheck = '1'
-  $elrepo_main_includepkgs = absent
-  $elrepo_main_exclude = absent
-
-  $elrepo_testing_url = "http://elrepo.org/linux/testing/el${::operatingsystemmajrelease}/${::architecture}}"
-  $elrepo_testing_mirrors = "http://elrepo.org/mirrors-elrepo.el${::operatingsystemmajrelease}"
-  $elrepo_testing_enabled = '1'
-  $elrepo_testing_gpgcheck = '1'
-  $elrepo_testing_includepkgs = absent
-  $elrepo_testing_exclude = absent 
-
-  $elrepo_kernel_url = "http://elrepo.org/linux/kernel/el${::operatingsystemmajrelease}/${::architecture}"
-  $elrepo_kernel_mirrors = "http://elrepo.org/mirrors-elrepo.el${::operatingsystemmajrelease}"
-  $elrepo_kernel_enabled = '1'
-  $elrepo_kernel_gpgcheck = '1'
-  $elrepo_kernel_includepkgs = absent
-  $elrepo_kernel_exclude = absent
-
-  $elrepo_extras_url = "http://elrepo.org/linux/extras/el${::operatingsystemmajrelease}/${::architecture}"
-  $elrepo_extras_mirrors = "http://elrepo.org/mirrors-elrepo.el${::operatingsystemmajrelease}"
-  $elrepo_extras_enabled = '1'
-  $elrepo_extras_gpgcheck = '1'
-  $elrepo_extras_includepkgs = absent
-  $elrepo_extras_exclude = absent
-
   # IUS Settings.
   $ius_url = "http://dl.iuscommunity.org/pub/ius/stable/Redhat/${::operatingsystemmajrelease}/${::architecture}"
   $ius_enabled = '1'
@@ -50,13 +20,6 @@ class yumrepos::params {
   $ius_archive_gpgcheck = '1'
   $ius_archive_includepkgs = absent
   $ius_archive_exclude = absent
-
-  # IUS Testing Settings.
-  $ius_testing_url = "http://dl.iuscommunity.org/pub/ius/testing/Redhat/${::operatingsystemmajrelease}/${::architecture}"
-  $ius_testing_enabled = '0'
-  $ius_testing_gpgcheck = '1'
-  $ius_testing_includepkgs = absent
-  $ius_testing_exclude = absent
 
   # Jenkins Settings.
   $jenkins_url = 'http://pkg.jenkins-ci.org/redhat/'
@@ -128,11 +91,4 @@ class yumrepos::params {
   $zabbix24_gpgcheck = '1'
   $zabbix24_includepkgs = absent
   $zabbix24_exclude = absent
-
-  # Logstash Settings.
-  $logstash14_url = "http://packages.elasticsearch.org/logstash/1.4/centos"
-  $logstash14_enabled = '1'
-  $logstash14_gpgcheck = '1'
-  $logstash14_includepkgs = absent
-  $logstash14_exclude = absent
 }
