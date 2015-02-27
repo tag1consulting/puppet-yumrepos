@@ -91,4 +91,11 @@ class yumrepos::params {
   $zabbix24_gpgcheck = '1'
   $zabbix24_includepkgs = absent
   $zabbix24_exclude = absent
+
+  # Logstash Settings.
+  $logstash14_url = "http://packages.elasticsearch.org/logstash/1.4/centos"
+  $logstash14_enabled = '1'
+  $logstash14_gpgcheck = '1'
+  $logstash14_includepkgs = absent
+  $logstash14_exclude = absent
 }
