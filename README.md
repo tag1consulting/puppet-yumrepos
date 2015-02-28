@@ -11,12 +11,12 @@ Currently includes repo definitions for the following yum repos (class names in 
 * IUS Community and optionally IUS Community Archive (yumrepos::ius)
 * Jenkins (yumrepos::jenkins)
 * Jpackage (yumrepos::jpackage)
+* Logstash 1.4 (yumrepos::logstash14)
 * Percona (yumrepos::percona)
 * PuppetLabs (yumrepos::puppetlabs)
 * RepoForge (yumrepos::repoforge)
 * Varnish 3 (yumrepos::varnish3)
 * Zabbix 2.4 (yumrepos::zabbix24)
-* Logstash 1.4 (yumrepos::logstash14)
 
 Usage
 -----
