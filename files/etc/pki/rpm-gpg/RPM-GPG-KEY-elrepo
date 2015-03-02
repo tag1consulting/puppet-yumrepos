@@ -1,4 +1,4 @@
------RPM-GPG-KEY-elrepo.org-----
+-----START RPM-GPG-KEY-elrepo.org-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
 mQGiBEm+/6QRBAC5mbtqOFSQ0FkTLIMdIoqxtraIeUqwbPp3IBYQ/u/EREjyEf1D
@@ -27,4 +27,4 @@ ppuowtBi8bcGB1vJZjTySQcSKWv+IVp5ej06uZ9501BEm6HxUZkuAGPecP65kcQu
 SqzhFygT62eISQQYEQIACQUCSb7/pwIbDAAKCRAwm8MFuq2uUq8PAKC1+E2pSwiS
 oHXkKYPYDwApsP1mVACfRe1YnggLYQtG9LMeweVQQC77rK8=
 =qyRr
------END PGP PUBLIC KEY BLOCK-----
+-----END RPM-GPG-KEY-elrepo.org-----
