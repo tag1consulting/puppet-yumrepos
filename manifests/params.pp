@@ -18,21 +18,21 @@ class yumrepos::params {
 
   $elrepo_testing_url = "http://elrepo.org/linux/testing/el${::operatingsystemmajrelease}/${::architecture}}"
   $elrepo_testing_mirrors = "http://elrepo.org/mirrors-elrepo.el${::operatingsystemmajrelease}"
-  $elrepo_testing_enabled = '1'
+  $elrepo_testing_enabled = '0'
   $elrepo_testing_gpgcheck = '1'
   $elrepo_testing_includepkgs = absent
   $elrepo_testing_exclude = absent 
 
   $elrepo_kernel_url = "http://elrepo.org/linux/kernel/el${::operatingsystemmajrelease}/${::architecture}"
   $elrepo_kernel_mirrors = "http://elrepo.org/mirrors-elrepo.el${::operatingsystemmajrelease}"
-  $elrepo_kernel_enabled = '1'
+  $elrepo_kernel_enabled = '0'
   $elrepo_kernel_gpgcheck = '1'
   $elrepo_kernel_includepkgs = absent
   $elrepo_kernel_exclude = absent
 
   $elrepo_extras_url = "http://elrepo.org/linux/extras/el${::operatingsystemmajrelease}/${::architecture}"
   $elrepo_extras_mirrors = "http://elrepo.org/mirrors-elrepo.el${::operatingsystemmajrelease}"
-  $elrepo_extras_enabled = '1'
+  $elrepo_extras_enabled = '0'
   $elrepo_extras_gpgcheck = '1'
   $elrepo_extras_includepkgs = absent
   $elrepo_extras_exclude = absent
