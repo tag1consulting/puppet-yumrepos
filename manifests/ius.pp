@@ -13,6 +13,11 @@ class yumrepos::ius (
   $ius_archive_gpgcheck = $yumrepos::params::ius_archive_gpgcheck,
   $ius_archive_includepkgs = $yumrepos::params::ius_archive_includepkgs,
   $ius_archive_exclude = $yumrepos::params::ius_archive_exclude,
+  $ius_testing_url = $yumrepos::params::ius_testing_url,
+  $ius_testing_enabled = $yumrepos::params::ius_testing_enabled,
+  $ius_testing_gpgcheck = $yumrepos::params::ius_testing_gpgcheck,
+  $ius_testing_includepkgs = $yumrepos::params::ius_testing_includepkgs,
+  $ius_testing_exclude = $yumrepos::params::ius_testing_exclude,
 ) inherits yumrepos::params {
   file { '/etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY':
     ensure => present,
@@ -40,6 +45,17 @@ class yumrepos::ius (
     includepkgs => $ius_archive_includepkgs,
     exclude     => $ius_archive_exclude,
     gpgcheck    => $ius_archive_gpgcheck,
+    gpgkey      => 'file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY',
+    require     => [ Class['yumrepos::epel'], File['/etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY'] ],
+  }
+
+  yumrepo { 'ius-testing':
+    descr       => 'IUS Testing',
+    baseurl     => $ius_testing_url,
+    enabled     => $ius_testing_enabled,
+    includepkgs => $ius_testing_includepkgs,
+    exclude     => $ius_testing_exclude,
+    gpgcheck    => $ius_testing_gpgcheck,
     gpgkey      => 'file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY',
     require     => [ Class['yumrepos::epel'], File['/etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY'] ],
   }
