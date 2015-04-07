@@ -1,6 +1,6 @@
 # Class: yumrepos::elrepo
 #
-# Installs the ELREPO yum repository.
+# Installs the ElRepo yum repository.
 #
 class yumrepos::elrepo (
   $elrepo_main_url = $yumrepos::params::elrepo_main_url,
@@ -28,23 +28,22 @@ class yumrepos::elrepo (
   $elrepo_extras_exclude = $yumrepos::params::elrepo_extras_exclude,
 ) inherits yumrepos::params {
 
-    file { '/etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo':
+    file { '/etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo.org':
     ensure => present,
     owner  => root,
     group  => root,
     mode   => '0644',
-    source => 'puppet:///modules/yumrepos/etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo',
+    source => 'puppet:///modules/yumrepos/etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo.org',
   }
 
    yumrepo { 'elrepo':
     enabled     => $elrepo_main_enabled,
     descr       => "ELRepo.org Community Enterprise Linux Repository - el${::operatingsystemmajrelease}",
     baseurl     => $elrepo_main_url,
-    mirrorlist  => $elrepo_main_mirrors,
     includepkgs => $elrepo_main_includepkgs,
     exclude     => $elrepo_main_exclude,
     gpgcheck    => $elrepo_main_gpgcheck,
-    gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo',
+    gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo.org',
     require     => File['/etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo'],
   }
 
@@ -52,32 +51,29 @@ class yumrepos::elrepo (
     enabled     => $elrepo_testing_enabled,
     descr       => "ELRepo.org Community Enterprise Linux Testing Repository - el${::operatingsystemmajrelease}",
     baseurl     => $elrepo_testing_url,
-    mirrorlist  => $elrepo_testing_mirrors,
     includepkgs => $elrepo_testing_includepkgs,
     exclude     => $elrepo_testing_exclude,
-    gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo',
-    require     => File['/etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo'],
+    gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo.org',
+    require     => File['/etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo.org'],
   }
 
    yumrepo { 'elrepo-kernel':
     enabled     => $elrepo_kernel_enabled,
     descr       => "ELRepo.org Community Enterprise Linux Kernel Repository - el${::operatingsystemmajrelease}",
     baseurl     => $elrepo_kernel_url,
-    mirrorlist  => $elrepo_kernel_mirrors,
     includepkgs => $elrepo_kernel_includepkgs,
     exclude     => $elrepo_kernel_exclude,
-    gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo',
-    require     => File['/etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo'],
+    gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo.org',
+    require     => File['/etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo.org'],
   }
 
    yumrepo { 'elrepo-extras':
     enabled     => $elrepo_extras_enabled,
     descr       => "ELRepo.org Community Enterprise Linux Extras Repository - el${::operatingsystemmajrelease}",
     baseurl     => $elrepo_extras_url,
-    mirrorlist  => $elrepo_extras_mirrors,
     includepkgs => $elrepo_extras_includepkgs,
     exclude     => $elrepo_extras_exclude,
-    gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo',
-    require     => File['/etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo'],
+    gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo.org',
+    require     => File['/etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo.org'],
   }
 }
