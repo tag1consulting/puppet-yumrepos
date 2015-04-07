@@ -44,7 +44,7 @@ class yumrepos::elrepo (
     exclude     => $elrepo_main_exclude,
     gpgcheck    => $elrepo_main_gpgcheck,
     gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo.org',
-    require     => File['/etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo'],
+    require     => File['/etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo.org'],
   }
 
    yumrepo { 'elrepo-testing':
