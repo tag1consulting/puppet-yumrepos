@@ -8,7 +8,7 @@ Currently includes repo definitions for the following yum repos (class names in 
 * Drupal Drush 5 (yumrepos::drush5)
 * Drupal Drush 6 (yumrepos::drush6)
 * EPEL (yumrepos::epel)
-* IUS Community and optionally IUS Community Archive (yumrepos::ius)
+* IUS Community and optionally IUS Community Archive and Testing repos (yumrepos::ius)
 * Jenkins (yumrepos::jenkins)
 * Jpackage (yumrepos::jpackage)
 * Logstash 1.4 (yumrepos::logstash14)
