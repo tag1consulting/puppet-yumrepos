@@ -1,6 +1,6 @@
 {
   "name": "jeffsheltren-yumrepos",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "author": "Jeff Sheltren",
   "summary": "Yum repo definitions for common repos (RHEL/CentOS).",
   "license": "BSD 3-Clause",
