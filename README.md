@@ -13,6 +13,7 @@ Currently includes repo definitions for the following yum repos (class names in 
 * Jenkins (yumrepos::jenkins)
 * Jpackage (yumrepos::jpackage)
 * Logstash 1.4 (yumrepos::logstash14)
+* MariaDB 10 (yumrepos::mariadb10)
 * Percona (yumrepos::percona)
 * PuppetLabs (yumrepos::puppetlabs)
 * RepoForge (yumrepos::repoforge)
