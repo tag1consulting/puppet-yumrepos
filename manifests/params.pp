@@ -131,4 +131,12 @@ class yumrepos::params {
   $logstash14_gpgcheck = '1'
   $logstash14_includepkgs = absent
   $logstash14_exclude = absent
+
+  # MariaDB 10 Settings.
+  $mariadb10_url = "http://yum.mariadb.org/10.0/centos${::operatingsystemmajrelease}-amd64"
+  $mariadb10_enabled = '1'
+  $mariadb10_gpgcheck = '1'
+  $mariadb10_includepkgs = absent
+  $mariadb10_exclude = absent
+
 }
