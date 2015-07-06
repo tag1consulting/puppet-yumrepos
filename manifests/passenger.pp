@@ -1,6 +1,6 @@
 # Class: yumrepos::passenger
 #
-# Installs the Percona yum repository.
+# Installs the Passenger yum repository.
 #
 class yumrepos::passenger (
   $passenger_url = $yumrepos::params::passenger_url,
@@ -19,7 +19,7 @@ class yumrepos::passenger (
   }
 
   yumrepo { 'passenger':
-    descr       => 'Percona',
+    descr       => 'Passenger',
     baseurl     => $passenger_url,
     enabled     => $passenger_enabled,
     includepkgs => $passenger_includepkgs,
