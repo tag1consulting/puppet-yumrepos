@@ -14,11 +14,13 @@ Currently includes repo definitions for the following yum repos (class names in 
 * Jpackage (yumrepos::jpackage)
 * Logstash 1.4 (yumrepos::logstash14)
 * MariaDB 10 (yumrepos::mariadb10)
+* Nginx (yumrepos::nginx)
 * Percona (yumrepos::percona)
 * Phusion Passenger (yumrepos::passenger)
 * PuppetLabs (yumrepos::puppetlabs)
 * RepoForge (yumrepos::repoforge)
 * Varnish 3 (yumrepos::varnish3)
+* Varnish 4 (yumrepos::varnish4)
 * Zabbix 2.4 (yumrepos::zabbix24)
 
 Usage

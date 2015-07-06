@@ -19,7 +19,7 @@ class yumrepos::params {
   $elrepo_testing_enabled = '0'
   $elrepo_testing_gpgcheck = '1'
   $elrepo_testing_includepkgs = absent
-  $elrepo_testing_exclude = absent 
+  $elrepo_testing_exclude = absent
 
   $elrepo_kernel_url = "http://elrepo.org/linux/kernel/el${::operatingsystemmajrelease}/${::architecture}"
   $elrepo_kernel_enabled = '0'
@@ -97,6 +97,13 @@ class yumrepos::params {
   $varnish3_includepkgs = absent
   $varnish3_exclude = absent
 
+  # Varnish 4 Settings.
+  $varnish4_url = "http://repo.varnish-cache.org/redhat/varnish-4.0/el${::operatingsystemmajrelease}/${::architecture}"
+  $varnish4_enabled = '1'
+  $varnish4_gpgcheck = '0'
+  $varnish4_includepkgs = absent
+  $varnish4_exclude = absent
+
   # Repoforge Settings.
   $repoforge_url = "http://apt.sw.be/redhat/el${::operatingsystemmajrelease}/en/${::architecture}/rpmforge"
   $repoforge_enabled = '1'
@@ -138,6 +145,21 @@ class yumrepos::params {
   $mariadb10_gpgcheck = '1'
   $mariadb10_includepkgs = absent
   $mariadb10_exclude = absent
+
+  # Nginx Settings.
+  $os_short_name = $::operatingsystem ? {
+    'CentOS' => 'centos',
+    'RedHat' => 'rhel',
+    default  => undef
+  }
+  if $os_short_name == undef {
+    fail('Unsupported O/S')
+  }
+  $nginx_url = "http://nginx.org/packages/${os_short_name}/${::operatingsystemmajrelease}/${::architecture}"
+  $nginx_enabled = '1'
+  $nginx_gpgcheck = '1'
+  $nginx_includepkgs = absent
+  $nginx_exclude = absent
 
   # Passenger Settings.
   $passenger_url = "https://oss-binaries.phusionpassenger.com/yum/passenger/el/${::operatingsystemmajrelease}/${::architecture}"
