@@ -19,6 +19,7 @@ Currently includes repo definitions for the following yum repos (class names in 
 * RepoForge (yumrepos::repoforge)
 * Varnish 3 (yumrepos::varnish3)
 * Zabbix 2.4 (yumrepos::zabbix24)
+* Phusion Passenger (yumrepos::passenger)
 
 Usage
 -----
