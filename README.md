@@ -15,6 +15,7 @@ Currently includes repo definitions for the following yum repos (class names in 
 * Logstash 1.4 (yumrepos::logstash14)
 * MariaDB 10 (yumrepos::mariadb10)
 * Percona (yumrepos::percona)
+* Phusion Passenger (yumrepos::passenger)
 * PuppetLabs (yumrepos::puppetlabs)
 * RepoForge (yumrepos::repoforge)
 * Varnish 3 (yumrepos::varnish3)
