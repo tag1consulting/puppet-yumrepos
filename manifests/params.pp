@@ -167,4 +167,11 @@ class yumrepos::params {
   $passenger_gpgcheck = '0'
   $passenger_includepkgs = absent
   $passenger_exclude = absent
+
+  # Elasticsearch 1.6
+  $elasticsearch16_url = "http://packages.elastic.co/elasticsearch/1.6/centos"
+  $elasticsearch16_enabled = '1'
+  $elasticsearch16_gpgcheck = '1'
+  $elasticsearch16_includepkgs = absent
+  $elasticsearch16_exclude = absent
 }
