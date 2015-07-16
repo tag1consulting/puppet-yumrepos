@@ -25,7 +25,7 @@ class yumrepos::elasticsearch16 (
     includepkgs => $elasticsearch16_includepkgs,
     exclude     => $elasticsearch16_exclude,
     gpgcheck    => $elasticsearch16_gpgcheck,
-    gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-elasticsearch',
-    require     => File['/etc/pki/rpm-gpg/RPM-GPG-KEY-elasticsearch'],
+    gpgkey      => 'file:///etc/pki/rpm-gpg/GPG-KEY-elasticsearch',
+    require     => File['/etc/pki/rpm-gpg/GPG-KEY-elasticsearch'],
   }
 }
