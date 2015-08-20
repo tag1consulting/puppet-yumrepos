@@ -16,6 +16,7 @@ Currently includes repo definitions for the following yum repos (class names in 
 * Jpackage (yumrepos::jpackage)
 * Logstash 1.4 (yumrepos::logstash14)
 * MariaDB 10 (yumrepos::mariadb10)
+* New Relic (yumrepos::newrelic)
 * Nginx (yumrepos::nginx)
 * Percona (yumrepos::percona)
 * Phusion Passenger (yumrepos::passenger)
