@@ -19,7 +19,7 @@ class yumrepos::newrelic (
   }
 
   yumrepo { 'newrelic':
-    descr       => 'New Relic 1.6',
+    descr       => 'New Relic',
     baseurl     => $newrelic_url,
     enabled     => $newrelic_enabled,
     includepkgs => $newrelic_includepkgs,
