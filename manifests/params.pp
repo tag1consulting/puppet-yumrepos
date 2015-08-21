@@ -181,4 +181,11 @@ class yumrepos::params {
   $elasticsearch16_gpgcheck = '1'
   $elasticsearch16_includepkgs = absent
   $elasticsearch16_exclude = absent
+
+  # New Relic
+  $newrelic_url = "http://yum.newrelic.com/pub/newrelic/el5/${::architecture}"
+  $newrelic_enabled = '1'
+  $newrelic_gpgcheck = '1'
+  $newrelic_includepkgs = absent
+  $newrelic_exclude = absent
 }
