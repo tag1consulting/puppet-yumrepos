@@ -10,12 +10,12 @@ class yumrepos::newrelic (
   $newrelic_exclude = $yumrepos::params::newrelic_exclude,
 ) inherits yumrepos::params {
 
-  file { '/etc/pki/rpm-gpg/GPG-KEY-newrelic':
+  file { '/etc/pki/rpm-gpg/RPM-GPG-KEY-newrelic':
     ensure => present,
     owner  => root,
     group  => root,
     mode   => '0644',
-    source => 'puppet:///modules/yumrepos/etc/pki/rpm-gpg/GPG-KEY-newrelic',
+    source => 'puppet:///modules/yumrepos/etc/pki/rpm-gpg/RPM-GPG-KEY-newrelic',
   }
 
   yumrepo { 'newrelic':
@@ -25,7 +25,7 @@ class yumrepos::newrelic (
     includepkgs => $newrelic_includepkgs,
     exclude     => $newrelic_exclude,
     gpgcheck    => $newrelic_gpgcheck,
-    gpgkey      => 'file:///etc/pki/rpm-gpg/GPG-KEY-newrelic',
-    require     => File['/etc/pki/rpm-gpg/GPG-KEY-newrelic'],
+    gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-newrelic',
+    require     => File['/etc/pki/rpm-gpg/RPM-GPG-KEY-newrelic'],
   }
 }
