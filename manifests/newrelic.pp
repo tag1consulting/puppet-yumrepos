@@ -15,7 +15,7 @@ class yumrepos::newrelic (
     owner  => root,
     group  => root,
     mode   => '0644',
-    source => 'puppet:///modules/yumrepos/etc/pki/rpm-gpg/GPG-KEY-NewRelic',
+    source => 'puppet:///modules/yumrepos/etc/pki/rpm-gpg/GPG-KEY-newrelic',
   }
 
   yumrepo { 'newrelic':
