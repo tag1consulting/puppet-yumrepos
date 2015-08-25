@@ -130,7 +130,7 @@ class yumrepos::params {
   $drush7_enabled = '1'
   $drush7_includepkgs = absent
   $drush7_exclude = absent
-  $drush7_gpgcheck = '0'
+  $drush7_gpgcheck = '1'
 
   # Zabbix Settings.
   $zabbix24_url = "http://repo.zabbix.com/zabbix/2.4/rhel/${::operatingsystemmajrelease}/${::architecture}"
