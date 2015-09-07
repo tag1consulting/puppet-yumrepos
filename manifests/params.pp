@@ -34,21 +34,21 @@ class yumrepos::params {
   $elrepo_extras_exclude = absent
 
   # IUS Settings.
-  $ius_url = "http://dl.iuscommunity.org/pub/ius/stable/Redhat/${::operatingsystemmajrelease}/${::architecture}"
+  $ius_url = "http://dl.iuscommunity.org/pub/ius/stable/${::operatingsystem}/${::operatingsystemmajrelease}/${::architecture}"
   $ius_enabled = '1'
   $ius_gpgcheck = '1'
   $ius_includepkgs = absent
   $ius_exclude = absent
 
   # IUS Archive Settings.
-  $ius_archive_url = "http://dl.iuscommunity.org/pub/ius/archive/Redhat/${::operatingsystemmajrelease}/${::architecture}"
+  $ius_archive_url = "http://dl.iuscommunity.org/pub/ius/archive/${::operatingsystem}/${::operatingsystemmajrelease}/${::architecture}"
   $ius_archive_enabled = '0'
   $ius_archive_gpgcheck = '1'
   $ius_archive_includepkgs = absent
   $ius_archive_exclude = absent
 
   # IUS Testing Settings.
-  $ius_testing_url = "http://dl.iuscommunity.org/pub/ius/testing/Redhat/${::operatingsystemmajrelease}/${::architecture}"
+  $ius_testing_url = "http://dl.iuscommunity.org/pub/ius/testing/${::operatingsystem}/${::operatingsystemmajrelease}/${::architecture}"
   $ius_testing_enabled = '0'
   $ius_testing_gpgcheck = '1'
   $ius_testing_includepkgs = absent
