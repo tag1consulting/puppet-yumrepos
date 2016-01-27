@@ -54,6 +54,13 @@ class yumrepos::params {
   $ius_testing_includepkgs = absent
   $ius_testing_exclude = absent
 
+  # Cloudera Settings.
+  $cloudera_url = "https://archive.cloudera.com/cdh5/redhat/${::operatingsystemmajrelease}/${::architecture}/cdh/5/"
+  $cloudera_enabled = '1'
+  $cloudera_gpgcheck = '1'
+  $cloudera_includepkgs = absent
+  $cloudera_exclude = absent
+
   # Jenkins Settings.
   $jenkins_url = 'http://pkg.jenkins-ci.org/redhat/'
   $jenkins_enabled = '1'
