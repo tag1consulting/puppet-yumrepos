@@ -5,9 +5,8 @@ Yum repo definitions for enterprise linux (RHEL/CentOS)
 Each repo to manage is handled in its own class.
 
 Currently includes repo definitions for the following yum repos (class names in parenthesis):
-* Drupal Drush 5 (yumrepos::drush5)
-* Drupal Drush 6 (yumrepos::drush6)
 * Drupal Drush 7 (yumrepos::drush7)
+* Drupal Drush 8 (yumrepos::drush8)
 * Elasticsearch 1.6 (yumrepos::elasticsearch16)
 * ELRepo (yumrepos::elrepo)
 * EPEL (yumrepos::epel)
