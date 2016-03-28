@@ -118,26 +118,19 @@ class yumrepos::params {
   $repoforge_includepkgs = absent
   $repoforge_exclude = absent
 
-  # Drush5 Settings.
-  $drush5_url = "http://pkg.tag1consulting.com/drush/drush-5/el${::operatingsystemmajrelease}/noarch"
-  $drush5_enabled = '1'
-  $drush5_includepkgs = absent
-  $drush5_exclude = absent
-  $drush5_gpgcheck = '1'
-
-  # Drush6 Settings.
-  $drush6_url = "http://pkg.tag1consulting.com/drush/drush-6/el${::operatingsystemmajrelease}/noarch"
-  $drush6_enabled = '1'
-  $drush6_includepkgs = absent
-  $drush6_exclude = absent
-  $drush6_gpgcheck = '1'
-
   # Drush7 Settings.
   $drush7_url = "http://pkg.tag1consulting.com/drush/drush-7/el${::operatingsystemmajrelease}/noarch"
   $drush7_enabled = '1'
   $drush7_includepkgs = absent
   $drush7_exclude = absent
   $drush7_gpgcheck = '1'
+
+  # Drush8 Settings.
+  $drush8_url = "http://pkg.tag1consulting.com/drush/drush-8/el${::operatingsystemmajrelease}/noarch"
+  $drush8_enabled = '1'
+  $drush8_includepkgs = absent
+  $drush8_exclude = absent
+  $drush8_gpgcheck = '1'
 
   # Zabbix Settings.
   $zabbix24_url = "http://repo.zabbix.com/zabbix/2.4/rhel/${::operatingsystemmajrelease}/${::architecture}"
