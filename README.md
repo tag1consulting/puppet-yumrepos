@@ -7,6 +7,7 @@ Each repo to manage is handled in its own class.
 Currently includes repo definitions for the following yum repos (class names in parenthesis):
 * Drupal Drush 7 (yumrepos::drush7)
 * Drupal Drush 8 (yumrepos::drush8)
+* Drupal Drush 9 (yumrepos::drush9)
 * Elasticsearch 1.6 (yumrepos::elasticsearch16)
 * ELRepo (yumrepos::elrepo)
 * EPEL (yumrepos::epel)
