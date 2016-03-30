@@ -132,6 +132,13 @@ class yumrepos::params {
   $drush8_exclude = absent
   $drush8_gpgcheck = '1'
 
+  # Drush9 Settings.
+  $drush9_url = "http://pkg.tag1consulting.com/drush/drush-9/el${::operatingsystemmajrelease}/noarch"
+  $drush9_enabled = '1'
+  $drush9_includepkgs = absent
+  $drush9_exclude = absent
+  $drush9_gpgcheck = '1'
+
   # Zabbix Settings.
   $zabbix24_url = "http://repo.zabbix.com/zabbix/2.4/rhel/${::operatingsystemmajrelease}/${::architecture}"
   $zabbix24_enabled = '1'
