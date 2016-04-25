@@ -28,7 +28,7 @@ class yumrepos::elrepo (
   $elrepo_extras_exclude = $yumrepos::params::elrepo_extras_exclude,
 ) inherits yumrepos::params {
 
-    file { '/etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo.org':
+  file { '/etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo.org':
     ensure => present,
     owner  => root,
     group  => root,
@@ -36,7 +36,7 @@ class yumrepos::elrepo (
     source => 'puppet:///modules/yumrepos/etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo.org',
   }
 
-   yumrepo { 'elrepo':
+  yumrepo { 'elrepo':
     enabled     => $elrepo_main_enabled,
     descr       => "ELRepo.org Community Enterprise Linux Repository - el${::operatingsystemmajrelease}",
     baseurl     => $elrepo_main_url,
@@ -47,7 +47,7 @@ class yumrepos::elrepo (
     require     => File['/etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo.org'],
   }
 
-   yumrepo { 'elrepo-testing':
+  yumrepo { 'elrepo-testing':
     enabled     => $elrepo_testing_enabled,
     descr       => "ELRepo.org Community Enterprise Linux Testing Repository - el${::operatingsystemmajrelease}",
     baseurl     => $elrepo_testing_url,
@@ -57,7 +57,7 @@ class yumrepos::elrepo (
     require     => File['/etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo.org'],
   }
 
-   yumrepo { 'elrepo-kernel':
+  yumrepo { 'elrepo-kernel':
     enabled     => $elrepo_kernel_enabled,
     descr       => "ELRepo.org Community Enterprise Linux Kernel Repository - el${::operatingsystemmajrelease}",
     baseurl     => $elrepo_kernel_url,
@@ -67,7 +67,7 @@ class yumrepos::elrepo (
     require     => File['/etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo.org'],
   }
 
-   yumrepo { 'elrepo-extras':
+  yumrepo { 'elrepo-extras':
     enabled     => $elrepo_extras_enabled,
     descr       => "ELRepo.org Community Enterprise Linux Extras Repository - el${::operatingsystemmajrelease}",
     baseurl     => $elrepo_extras_url,
