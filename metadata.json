@@ -1,16 +1,17 @@
 {
-  "name": "jeffsheltren-yumrepos",
-  "version": "0.6.0",
-  "author": "Jeff Sheltren",
+  "name": "tag1-yumrepos",
+  "version": "0.9.1",
+  "author": "Tag1 Consulting, Inc.",
   "summary": "Yum repo definitions for common repos (RHEL/CentOS).",
   "license": "BSD 3-Clause",
   "source": "git@github.com:tag1consulting/puppet-yumrepos.git",
   "project_page": "https://github.com/tag1consulting/puppet-yumrepos",
   "issues_url": "https://github.com/tag1consulting/puppet-yumrepos/issues",
-  "description": "Provides multiple \"yumrepos::reponame\" classes used to create yum repos on CentOS/RHEL systems. Classes are parameterized so that common options are easily configurable with hiera. Includes GPG keys for repos where available.",
   "dependencies": [
   
   ],
+  "data_provider": "hiera",
+  "description": "Provides multiple \"yumrepos::reponame\" classes used to create yum repos on CentOS/RHEL systems. Classes are parameterized so that common options are easily configurable with hiera. Includes GPG keys for repos where available.",
   "operatingsystem_support": [
     {
       "operatingsystem": "RedHat",
