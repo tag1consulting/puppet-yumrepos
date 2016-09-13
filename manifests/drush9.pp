@@ -10,12 +10,14 @@ class yumrepos::drush9 (
   $drush9_exclude = $yumrepos::params::drush9_exclude,
 ) inherits yumrepos::params {
 
-  file { '/etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1':
-    ensure => present,
-    owner  => root,
-    group  => root,
-    mode   => '0644',
-    source => 'puppet:///modules/yumrepos/etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1',
+  if ! defined(File['/etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1']) {
+    file { '/etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1':
+      ensure => present,
+      owner  => root,
+      group  => root,
+      mode   => '0644',
+      source => 'puppet:///modules/yumrepos/etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1',
+    }
   }
 
   yumrepo { 'tag1-drush9':

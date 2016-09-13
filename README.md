@@ -19,6 +19,7 @@ Currently includes repo definitions for the following yum repos (class names in 
 * New Relic (yumrepos::newrelic)
 * Nginx (yumrepos::nginx)
 * Percona (yumrepos::percona)
+* PHP XHProf for IUS PHP 5.6 (yumrepos::phpxhprof)
 * Phusion Passenger (yumrepos::passenger)
 * PuppetLabs (yumrepos::puppetlabs)
 * RepoForge (yumrepos::repoforge)

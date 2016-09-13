@@ -195,4 +195,11 @@ class yumrepos::params {
   $newrelic_gpgcheck = '1'
   $newrelic_includepkgs = absent
   $newrelic_exclude = absent
+
+  # PHP 5.6 XHProf
+  $php56xhprof_url = "http://pkg.tag1consulting.com/php-pecl-xhprof/el${::operatingsystemmajrelease}/${::architecture}"
+  $php56xhprof_enabled = '1'
+  $php56xhprof_gpgcheck = '1'
+  $php56xhprof_includepkgs = absent
+  $php56xhprof_exclude = absent
 }
