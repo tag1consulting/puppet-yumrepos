@@ -19,7 +19,7 @@ class yumrepos::mongodb (
   }
 
   yumrepo { 'mongodb':
-    descr       => 'MongoDB0',
+    descr       => 'MongoDB',
     baseurl     => $mongodb_url,
     enabled     => $mongodb_enabled,
     includepkgs => $mongodb_includepkgs,

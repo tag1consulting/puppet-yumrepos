@@ -161,7 +161,7 @@ class yumrepos::params {
   $mariadb10_exclude = absent
 
   # MongoDB
-  $mongodb_url = "https://repo.mongodb.org/yum/redhat/${::operatingsystemmajrelease}/mongodb-org/3.2/x86_64/"
+  $mongodb_url = "https://repo.mongodb.org/yum/redhat/${::operatingsystemmajrelease}/mongodb-org/3.2/${::architecture}/"
   $mongodb_enabled = '1'
   $mongodb_gpgcheck = '1'
   $mongodb_includepkgs = absent
