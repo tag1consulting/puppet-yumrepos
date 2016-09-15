@@ -160,6 +160,13 @@ class yumrepos::params {
   $mariadb10_includepkgs = absent
   $mariadb10_exclude = absent
 
+  # MongoDB
+  $mongodb_url = "https://repo.mongodb.org/yum/redhat/${::operatingsystemmajrelease}/mongodb-org/3.2/x86_64/"
+  $mongodb_enabled = '1'
+  $mongodb_gpgcheck = '1'
+  $mongodb_includepkgs = absent
+  $mongodb_exclude = absent
+
   # Nginx Settings.
   $os_short_name = $::operatingsystem ? {
     'CentOS' => 'centos',
