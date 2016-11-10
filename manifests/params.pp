@@ -111,6 +111,13 @@ class yumrepos::params {
   $varnish4_includepkgs = absent
   $varnish4_exclude = absent
 
+  # Varnish 4.1 Settings.
+  $varnish41_url = "http://repo.varnish-cache.org/redhat/varnish-4.1/el${::operatingsystemmajrelease}/${::architecture}"
+  $varnish41_enabled = '1'
+  $varnish41_gpgcheck = '1'
+  $varnish41_includepkgs = absent
+  $varnish41_exclude = absent
+
   # Repoforge Settings.
   $repoforge_url = "http://apt.sw.be/redhat/el${::operatingsystemmajrelease}/en/${::architecture}/rpmforge"
   $repoforge_enabled = '1'
