@@ -1,6 +1,6 @@
 {
   "name": "tag1-yumrepos",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "author": "Tag1 Consulting, Inc.",
   "summary": "Yum repo definitions for common repos (RHEL/CentOS).",
   "license": "BSD 3-Clause",
@@ -8,7 +8,7 @@
   "project_page": "https://github.com/tag1consulting/puppet-yumrepos",
   "issues_url": "https://github.com/tag1consulting/puppet-yumrepos/issues",
   "dependencies": [
-  
+
   ],
   "data_provider": "hiera",
   "description": "Provides multiple \"yumrepos::reponame\" classes used to create yum repos on CentOS/RHEL systems. Classes are parameterized so that common options are easily configurable with hiera. Includes GPG keys for repos where available.",
