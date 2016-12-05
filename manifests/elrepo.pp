@@ -9,7 +9,7 @@ class yumrepos::elrepo (
   $elrepo_includepkgs = $yumrepos::params::elrepo_main_includepkgs,
   $elrepo_exclude = $yumrepos::params::elrepo_main_exclude,
 
-  $elrepo_testing_url = $yumrepos::params::elrepo_url,
+  $elrepo_testing_url = $yumrepos::params::elrepo_testing_url,
   $elrepo_testing_enabled = $yumrepos::params::elrepo_testing_enabled,
   $elrepo_testing_gpgcheck = $yumrepos::params::elrepo_testing_gpgcheck,
   $elrepo_testing_includepkgs = $yumrepos::params::elrepo_testing_includepkgs,
