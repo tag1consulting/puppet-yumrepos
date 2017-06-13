@@ -20,8 +20,8 @@ class yumrepos::varnish-modules (
     }
   }
 
-  yumrepo { 'tag1-varnish-modules':
-    descr       => 'Tag1 Varmish modules',
+  yumrepo { 'varnish-modules':
+    descr       => 'Varmish modules',
     baseurl     => $varnish_modules_url,
     enabled     => $varnish_modules_enabled,
     includepkgs => $varnish_modules_includepkgs,
