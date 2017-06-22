@@ -20,8 +20,8 @@ class yumrepos::varnish-41-modules (
     }
   }
 
-  yumrepo { 'varnish-modules':
-    descr       => 'Varmish modules',
+  yumrepo { 'varnish-41-modules':
+    descr       => 'Varnish 4.1 modules',
     baseurl     => $varnish_41_modules_url,
     enabled     => $varnish_41_modules_enabled,
     includepkgs => $varnish_41_modules_includepkgs,
