@@ -2,12 +2,12 @@
 #
 # Installs the varnish-modules yum repository.
 #
-class yumrepos::varnish-modules (
-  $varnish_modules_url = $yumrepos::params::varnish_modules_url,
-  $varnish_modules_enabled = $yumrepos::params::varnish_modules_enabled,
-  $varnish_modules_gpgcheck = $yumrepos::params::varnish_modules_gpgcheck,
-  $varnish_modules_includepkgs = $yumrepos::params::varnish_modules_includepkgs,
-  $varnish_modules_exclude = $yumrepos::params::varnish_modules_exclude,
+class yumrepos::varnish-41-modules (
+  $varnish_41_modules_url = $yumrepos::params::varnish_41_modules_url,
+  $varnish_41_modules_enabled = $yumrepos::params::varnish_41_modules_enabled,
+  $varnish_41_modules_gpgcheck = $yumrepos::params::varnish_41_modules_gpgcheck,
+  $varnish_41_modules_includepkgs = $yumrepos::params::varnish_41_modules_includepkgs,
+  $varnish_41_modules_exclude = $yumrepos::params::varnish_41_modules_exclude,
 ) inherits yumrepos::params {
 
   if ! defined(File['/etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1']) {
@@ -22,11 +22,11 @@ class yumrepos::varnish-modules (
 
   yumrepo { 'varnish-modules':
     descr       => 'Varmish modules',
-    baseurl     => $varnish_modules_url,
-    enabled     => $varnish_modules_enabled,
-    includepkgs => $varnish_modules_includepkgs,
-    exclude     => $varnish_modules_exclude,
-    gpgcheck    => $varnish_modules_gpgcheck,
+    baseurl     => $varnish_41_modules_url,
+    enabled     => $varnish_41_modules_enabled,
+    includepkgs => $varnish_41_modules_includepkgs,
+    exclude     => $varnish_41_modules_exclude,
+    gpgcheck    => $varnish_41_modules_gpgcheck,
     gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1',
     require     => File['/etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1'],
   }

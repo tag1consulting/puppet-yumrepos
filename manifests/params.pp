@@ -218,9 +218,9 @@ class yumrepos::params {
   $php56xhprof_exclude = absent
 
   # Varnish-modules Settings.
-  $varnish_modules = "https://pkg.tag1consulting.com/varnish-modules/varnish-4.1/el${::operatingsystemmajrelease}/${::architecture}"
-  $varnish_modules_enabled = '1'
-  $varnish_modules_includepkgs = absent
-  $varnish_modules_exclude = absent
-  $varnish_modules_gpgcheck = '1'
+  $varnish_41_modules = "https://pkg.tag1consulting.com/varnish-modules/varnish-4.1/el${::operatingsystemmajrelease}/${::architecture}"
+  $varnish_41_modules_enabled = '1'
+  $varnish_41_modules_includepkgs = absent
+  $varnish_41_modules_exclude = absent
+  $varnish_41_modules_gpgcheck = '1'
 }
