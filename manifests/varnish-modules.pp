@@ -1,4 +1,4 @@
-# Class: yumrepos::varnish-modules
+# Class: yumrepos::varnish-41-modules
 #
 # Installs the varnish-modules yum repository.
 #
