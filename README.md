@@ -11,7 +11,7 @@ Currently includes repo definitions for the following yum repos (class names in 
 * Elasticsearch 1.6 (yumrepos::elasticsearch16)
 * ELRepo (yumrepos::elrepo)
 * EPEL (yumrepos::epel)
-* Grafana (umrepos::grafana)
+* Grafana (yumrepos::grafana)
 * IUS Community and optionally IUS Community Archive and Testing repos (yumrepos::ius)
 * Jenkins (yumrepos::jenkins)
 * Jpackage (yumrepos::jpackage)
