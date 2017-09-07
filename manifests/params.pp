@@ -112,7 +112,7 @@ class yumrepos::params {
   $varnish4_exclude = absent
 
   # Varnish 4.1 Settings.
-  $varnish41_url = "http://repo.varnish-cache.org/redhat/varnish-4.1/el${::operatingsystemmajrelease}/${::architecture}"
+  $varnish41_url = "https://packagecloud.io/varnishcache/varnish41/el/${::operatingsystemmajrelease}/${::architecture}"
   $varnish41_enabled = '1'
   $varnish41_gpgcheck = '1'
   $varnish41_includepkgs = absent
