@@ -10,8 +10,8 @@ class yumrepos::varnish41 (
   $varnish41_exclude = $yumrepos::params::varnish41_exclude,
 ) inherits yumrepos::params {
 
-  if ! defined(File['/etc/pki/rpm-gpg/RPM-GPG-KEY-VARNISH']) {
-    file { '/etc/pki/rpm-gpg/RPM-GPG-KEY-VARNISH':
+  if ! defined(File['/etc/pki/rpm-gpg/RPM-GPG-KEY-VARNISH-PACKAGECLOUD']) {
+    file { '/etc/pki/rpm-gpg/RPM-GPG-KEY-VARNISH-PACKAGECLOUD':
       ensure => present,
       owner  => root,
       group  => root,
