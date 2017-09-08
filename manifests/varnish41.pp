@@ -16,7 +16,7 @@ class yumrepos::varnish41 (
       owner  => root,
       group  => root,
       mode   => '0644',
-      source => 'puppet:///modules/yumrepos/etc/pki/rpm-gpg/RPM-GPG-KEY-VARNISH',
+      source => 'puppet:///modules/yumrepos/etc/pki/rpm-gpg/RPM-GPG-KEY-VARNISH-PACKAGECLOUD',
     }
   }
 
@@ -27,7 +27,7 @@ class yumrepos::varnish41 (
     includepkgs => $varnish41_includepkgs,
     exclude     => $varnish41_exclude,
     gpgcheck    => $varnish41_gpgcheck,
-    gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-VARNISH',
-    require     => File['/etc/pki/rpm-gpg/RPM-GPG-KEY-VARNISH'],
+    gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-VARNISH-PACKAGECLOUD',
+    require     => File['/etc/pki/rpm-gpg/RPM-GPG-KEY-VARNISH-PACKAGECLOUD'],
   }
 }
