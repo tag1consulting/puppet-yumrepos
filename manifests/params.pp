@@ -114,7 +114,8 @@ class yumrepos::params {
   # Varnish 4.1 Settings.
   $varnish41_url = "https://packagecloud.io/varnishcache/varnish41/el/${::operatingsystemmajrelease}/${::architecture}"
   $varnish41_enabled = '1'
-  $varnish41_gpgcheck = '1'
+  $varnish41_gpgcheck = '0'
+  $varnish41_repo_gpgcheck = '1'
   $varnish41_includepkgs = absent
   $varnish41_exclude = absent
 
