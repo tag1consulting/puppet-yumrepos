@@ -168,6 +168,13 @@ class yumrepos::params {
   $mariadb10_includepkgs = absent
   $mariadb10_exclude = absent
 
+  # MariaDB 10.1 Settings.
+  $mariadb101_url = "http://yum.mariadb.org/10.1/centos${::operatingsystemmajrelease}-amd64"
+  $mariadb101_enabled = '1'
+  $mariadb101_gpgcheck = '1'
+  $mariadb101_includepkgs = absent
+  $mariadb101_exclude = absent
+
   # MongoDB
   $mongodb_url = "https://repo.mongodb.org/yum/redhat/${::operatingsystemmajrelease}/mongodb-org/3.2/${::architecture}/"
   $mongodb_enabled = '1'
