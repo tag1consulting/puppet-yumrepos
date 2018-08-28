@@ -10,12 +10,14 @@ class yumrepos::mariadb101 (
   $mariadb101_exclude = $yumrepos::params::mariadb101_exclude,
 ) inherits yumrepos::params {
 
-  file { '/etc/pki/rpm-gpg/RPM-GPG-KEY-MariaDB':
-    ensure => present,
-    owner  => root,
-    group  => root,
-    mode   => '0644',
-    source => 'puppet:///modules/yumrepos/etc/pki/rpm-gpg/RPM-GPG-KEY-MariaDB',
+  if ! defined(File['/etc/pki/rpm-gpg/RPM-GPG-KEY-MariaDB']) {
+    file { '/etc/pki/rpm-gpg/RPM-GPG-KEY-MariaDB':
+      ensure => present,
+      owner  => root,
+      group  => root,
+      mode   => '0644',
+      source => 'puppet:///modules/yumrepos/etc/pki/rpm-gpg/RPM-GPG-KEY-MariaDB',
+    }
   }
 
   yumrepo { 'mariadb-101':
