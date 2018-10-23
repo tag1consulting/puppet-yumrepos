@@ -15,7 +15,7 @@ class yumrepos::params {
   $elrepo_main_includepkgs = absent
   $elrepo_main_exclude = absent
 
-  $elrepo_testing_url = "http://elrepo.org/linux/testing/el${::operatingsystemmajrelease}/${::architecture}}"
+  $elrepo_testing_url = "http://elrepo.org/linux/testing/el${::operatingsystemmajrelease}/${::architecture}"
   $elrepo_testing_enabled = '0'
   $elrepo_testing_gpgcheck = '1'
   $elrepo_testing_includepkgs = absent
