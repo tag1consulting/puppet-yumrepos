@@ -238,4 +238,11 @@ class yumrepos::params {
   $grafana_gpgcheck = '1'
   $grafana_includepkgs = absent
   $grafana_exclude = absent
+
+  # Remi-safe Settings.
+  $remi_safe_url = "http://rpms.remirepo.net/enterprise/{::operatingsystemmajrelease}/safe/{::architecture}/"
+  $remi_safe_enabled = '1'
+  $remi_safe_gpgcheck = '1'
+  $remi_safe_includepkgs = absent
+  $remi_safe_exclude = absent
 }
