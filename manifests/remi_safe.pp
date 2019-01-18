@@ -3,11 +3,11 @@
 # Installs the Remi PHP yum repositories.
 #
 class yumrepos::remi_safe (
-  $remi_safe_url = $yumrepos::params::remi-safe_url,
-  $remi_safe_enabled = $yumrepos::params::remi-safe_enabled,
-  $remi_safe_gpgcheck = $yumrepos::params::remi-safe_gpgcheck,
-  $remi_safe_includepkgs = $yumrepos::params::remi-safe_includepkgs,
-  $remi_safe_exclude = $yumrepos::params::remi-safe_exclude,
+  $remi_safe_url = $yumrepos::params::remi_safe_url,
+  $remi_safe_enabled = $yumrepos::params::remi_safe_enabled,
+  $remi_safe_gpgcheck = $yumrepos::params::remi_safe_gpgcheck,
+  $remi_safe_includepkgs = $yumrepos::params::remi_safe_includepkgs,
+  $remi_safe_exclude = $yumrepos::params::remi_safe_exclude,
 ) inherits yumrepos::params {
 
   file { '/etc/pki/rpm-gpg/RPM-GPG-KEY-remi':
@@ -17,7 +17,7 @@ class yumrepos::remi_safe (
     source => 'puppet:///modules/yumrepos/etc/pki/rpm-gpg/RPM-GPG-KEY-remi',
   }
 
-  yumrepo { 'remi-safe':
+  yumrepo { 'remi_safe':
     descr       => 'remi-safe',
     baseurl     => $remi_safe_url,
     enabled     => $remi_safe_enabled,
