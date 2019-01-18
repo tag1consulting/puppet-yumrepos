@@ -2,7 +2,7 @@
 #
 # Installs the Remi PHP yum repositories.
 #
-class yumrepos::remi-safe (
+class yumrepos::remi_safe (
   $remi_safe_url = $yumrepos::params::remi-safe_url,
   $remi_safe_enabled = $yumrepos::params::remi-safe_enabled,
   $remi_safe_gpgcheck = $yumrepos::params::remi-safe_gpgcheck,
