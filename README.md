@@ -23,6 +23,7 @@ Currently includes repo definitions for the following yum repos (class names in 
 * PHP XHProf for IUS PHP 5.6 (yumrepos::phpxhprof)
 * Phusion Passenger (yumrepos::passenger)
 * PuppetLabs (yumrepos::puppetlabs)
+* Remi-safe (yumrepos::remi_safe)
 * RepoForge (yumrepos::repoforge)
 * Varnish 3 (yumrepos::varnish3)
 * Varnish 4.0 (yumrepos::varnish4)
