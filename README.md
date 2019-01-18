@@ -28,6 +28,7 @@ Currently includes repo definitions for the following yum repos (class names in 
 * Varnish 3 (yumrepos::varnish3)
 * Varnish 4.0 (yumrepos::varnish4)
 * Varnish 4.1 (yumrepos::varnish41)
+* Varnish 4.1 modules (yumrepos::varnish_41_modules)
 * Zabbix 2.4 (yumrepos::zabbix24)
 
 Usage

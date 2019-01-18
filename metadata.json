@@ -1,6 +1,6 @@
 {
   "name": "tag1-yumrepos",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "author": "Tag1 Consulting, Inc.",
   "summary": "Yum repo definitions for common repos (RHEL/CentOS).",
   "license": "BSD 3-Clause",
