@@ -2,7 +2,7 @@
 #
 # Installs the varnish-modules yum repository.
 #
-class yumrepos::varnish-41-modules (
+class yumrepos::varnish_41_modules (
   $varnish_41_modules_url = $yumrepos::params::varnish_41_modules_url,
   $varnish_41_modules_enabled = $yumrepos::params::varnish_41_modules_enabled,
   $varnish_41_modules_gpgcheck = $yumrepos::params::varnish_41_modules_gpgcheck,
@@ -20,7 +20,7 @@ class yumrepos::varnish-41-modules (
     }
   }
 
-  yumrepo { 'varnish-41-modules':
+  yumrepo { 'varnish_41_modules':
     descr       => 'Varnish 4.1 modules',
     baseurl     => $varnish_41_modules_url,
     enabled     => $varnish_41_modules_enabled,

@@ -1,3 +1,7 @@
+# Class: yumrepos::params
+#
+# Sets parameters
+#
 class yumrepos::params {
 
   # EPEL Settings.
@@ -155,7 +159,7 @@ class yumrepos::params {
   $zabbix24_exclude = absent
 
   # Logstash Settings.
-  $logstash14_url = "http://packages.elasticsearch.org/logstash/1.4/centos"
+  $logstash14_url = 'http://packages.elasticsearch.org/logstash/1.4/centos'
   $logstash14_enabled = '1'
   $logstash14_gpgcheck = '1'
   $logstash14_includepkgs = absent
@@ -205,7 +209,7 @@ class yumrepos::params {
   $passenger_exclude = absent
 
   # Elasticsearch 1.6
-  $elasticsearch16_url = "http://packages.elastic.co/elasticsearch/1.6/centos"
+  $elasticsearch16_url = 'http://packages.elastic.co/elasticsearch/1.6/centos'
   $elasticsearch16_enabled = '1'
   $elasticsearch16_gpgcheck = '1'
   $elasticsearch16_includepkgs = absent
@@ -240,7 +244,7 @@ class yumrepos::params {
   $grafana_exclude = absent
 
   # Remi-safe Settings.
-  $remi_safe_url = "http://rpms.remirepo.net/enterprise/{::operatingsystemmajrelease}/safe/{::architecture}/"
+  $remi_safe_url = "http://rpms.remirepo.net/enterprise/${::operatingsystemmajrelease}/safe/${::architecture}/"
   $remi_safe_enabled = '1'
   $remi_safe_gpgcheck = '1'
   $remi_safe_includepkgs = absent
