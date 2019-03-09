@@ -22,14 +22,17 @@ class yumrepos::varnish_41_modules (
   }
 
   yumrepo { 'varnish_41_modules':
-    descr       => 'Varnish 4.1 modules',
-    baseurl     => $varnish_41_modules_url,
-    enabled     => $varnish_41_modules_enabled,
-    includepkgs => $varnish_41_modules_includepkgs,
-    exclude     => $varnish_41_modules_exclude,
-    gpgcheck    => $varnish_41_modules_gpgcheck,
-    gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1-VARNISH-MODULES-PACKAGECLOUD',
-    require     => File['/etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1-VARNISH-MODULES-PACKAGECLOUD'],
+    descr         => 'Varnish 4.1 modules',
+    baseurl       => $varnish_41_modules_url,
+    enabled       => $varnish_41_modules_enabled,
+    includepkgs   => $varnish_41_modules_includepkgs,
+    exclude       => $varnish_41_modules_exclude,
+    gpgcheck      => $varnish_41_modules_gpgcheck,
+    repo_gpgcheck => $varnish_41_modules_rep_gpgcheck,
+    sslverify     => "1",
+    sslcacert     => "/etc/pki/tls/certs/ca-bundle.crt",
+    gpgkey        => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1-VARNISH-MODULES-PACKAGECLOUD',
+    require       => File['/etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1-VARNISH-MODULES-PACKAGECLOUD'],
   }
 
 }
