@@ -28,7 +28,7 @@ class yumrepos::varnish_41_modules (
     includepkgs   => $varnish_41_modules_includepkgs,
     exclude       => $varnish_41_modules_exclude,
     gpgcheck      => $varnish_41_modules_gpgcheck,
-    repo_gpgcheck => $varnish_41_modules_rep_gpgcheck,
+    repo_gpgcheck => $varnish_41_modules_repo_gpgcheck,
     sslverify     => "1",
     sslcacert     => "/etc/pki/tls/certs/ca-bundle.crt",
     gpgkey        => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1-VARNISH-MODULES-PACKAGECLOUD',
