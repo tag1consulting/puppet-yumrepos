@@ -6,17 +6,18 @@ class yumrepos::varnish_41_modules (
   $varnish_41_modules_url = $yumrepos::params::varnish_41_modules_url,
   $varnish_41_modules_enabled = $yumrepos::params::varnish_41_modules_enabled,
   $varnish_41_modules_gpgcheck = $yumrepos::params::varnish_41_modules_gpgcheck,
+  $varnish_41_modules_repo_gpgcheck = $yumrepos::params::varnish_41_modules_repo_gpgcheck,
   $varnish_41_modules_includepkgs = $yumrepos::params::varnish_41_modules_includepkgs,
   $varnish_41_modules_exclude = $yumrepos::params::varnish_41_modules_exclude,
 ) inherits yumrepos::params {
 
-  if ! defined(File['/etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1']) {
-    file { '/etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1':
+  if ! defined(File['/etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1-VARNISH-MODULES-PACKAGECLOUD']) {
+    file { '/etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1-VARNISH-MODULES-PACKAGECLOUD':
       ensure => present,
       owner  => root,
       group  => root,
       mode   => '0644',
-      source => 'puppet:///modules/yumrepos/etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1',
+      source => 'puppet:///modules/yumrepos/etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1-VARNISH-MODULES-PACKAGECLOUD',
     }
   }
 
@@ -27,8 +28,8 @@ class yumrepos::varnish_41_modules (
     includepkgs => $varnish_41_modules_includepkgs,
     exclude     => $varnish_41_modules_exclude,
     gpgcheck    => $varnish_41_modules_gpgcheck,
-    gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1',
-    require     => File['/etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1'],
+    gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1-VARNISH-MODULES-PACKAGECLOUD',
+    require     => File['/etc/pki/rpm-gpg/RPM-GPG-KEY-TAG1-VARNISH-MODULES-PACKAGECLOUD'],
   }
 
 }
