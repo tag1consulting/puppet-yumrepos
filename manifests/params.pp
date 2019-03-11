@@ -223,11 +223,12 @@ class yumrepos::params {
   $newrelic_exclude = absent
 
   # PHP 5.6 XHProf
-  $php56xhprof_url = "http://pkg.tag1consulting.com/php-pecl-xhprof/el${::operatingsystemmajrelease}/${::architecture}"
+  $php56xhprof_url = "http://packagecloud.io/tag1consulting/php56xhprof/el/${::operatingsystemmajrelease}/${::architecture}"
   $php56xhprof_enabled = '1'
-  $php56xhprof_gpgcheck = '1'
+  $php56xhprof_gpgcheck = '0'
   $php56xhprof_includepkgs = absent
   $php56xhprof_exclude = absent
+  $php56xhprof_repo_gpgcheck = '1'
 
   # Varnish-modules Settings.
   $varnish_41_modules_url = "https://packagecloud.io/tag1consulting/varnish-modules/el/${::operatingsystemmajrelease}/${::architecture}"
