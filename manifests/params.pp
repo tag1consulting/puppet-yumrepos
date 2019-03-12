@@ -131,7 +131,7 @@ class yumrepos::params {
   $repoforge_exclude = absent
 
   # Drush7 Settings.
-  $drush7_url = "http://packagecloud.io/tag1consulting/drush7/el/${::operatingsystemmajrelease}/noarch"
+  $drush7_url = "http://packagecloud.io/tag1consulting/drush7/el/${::operatingsystemmajrelease}/${::architecture}"
   $drush7_enabled = '1'
   $drush7_includepkgs = absent
   $drush7_exclude = absent
@@ -139,7 +139,7 @@ class yumrepos::params {
   $drush7_repo_gpgcheck = '1'
 
   # Drush8 Settings.
-  $drush8_url = "http://packagecloud.io/tag1consulting/drush8/el/${::operatingsystemmajrelease}/noarch"
+  $drush8_url = "http://packagecloud.io/tag1consulting/drush8/el/${::operatingsystemmajrelease}/${::architecture}"
   $drush8_enabled = '1'
   $drush8_includepkgs = absent
   $drush8_exclude = absent
@@ -147,7 +147,7 @@ class yumrepos::params {
   $drush8_repo_gpgcheck = '1'
 
   # Drush9 Settings.
-  $drush9_url = "http://packagecloud.io/tag1consulting/drush9/el/${::operatingsystemmajrelease}/noarch"
+  $drush9_url = "http://packagecloud.io/tag1consulting/drush9/el/${::operatingsystemmajrelease}/${::architecture}"
   $drush9_enabled = '1'
   $drush9_includepkgs = absent
   $drush9_exclude = absent
