@@ -19,13 +19,14 @@ class yumrepos::grafana (
   }
 
   yumrepo { 'grafana':
-    descr       => 'Grafana',
-    baseurl     => $grafana_url,
-    enabled     => $grafana_enabled,
-    includepkgs => $grafana_includepkgs,
-    exclude     => $grafana_exclude,
-    gpgcheck    => $grafana_gpgcheck,
-    gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-grafana',
-    require     => File['/etc/pki/rpm-gpg/RPM-GPG-KEY-grafana'],
+    descr         => 'Grafana',
+    baseurl       => $grafana_url,
+    enabled       => $grafana_enabled,
+    includepkgs   => $grafana_includepkgs,
+    exclude       => $grafana_exclude,
+    gpgcheck      => $grafana_gpgcheck,
+    repo_gpgcheck => '1',
+    gpgkey        => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-grafana',
+    require       => File['/etc/pki/rpm-gpg/RPM-GPG-KEY-grafana'],
   }
 }

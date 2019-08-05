@@ -242,7 +242,7 @@ class yumrepos::params {
   $varnish_41_modules_repo_gpgcheck = '1'
 
   # Grafana  
-  $grafana_url = "https://packagecloud.io/grafana/stable/el/6/${::architecture}"
+  $grafana_url = "https://packages.grafana.com/oss/rpm"
   $grafana_enabled = '1'
   $grafana_gpgcheck = '1'
   $grafana_includepkgs = absent
