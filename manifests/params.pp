@@ -80,7 +80,7 @@ class yumrepos::params {
   $jpackage_exclude = absent
 
   # Percona Settings.
-  $percona_url = "http://repo.percona.com/centos/${::operatingsystemmajrelease}/os/${::architecture}"
+  $percona_url = "http://repo.percona.com/percona/yum/release/${::operatingsystemmajrelease}/RPMS/${::architecture}"
   $percona_enabled = '1'
   $percona_gpgcheck = '1'
   $percona_includepkgs = absent
