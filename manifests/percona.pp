@@ -18,6 +18,14 @@ class yumrepos::percona (
     source => 'puppet:///modules/yumrepos/etc/pki/rpm-gpg/RPM-GPG-KEY-percona',
   }
 
+  file { '/etc/pki/rpm-gpg/PERCONA-PACKAGING-KEY':
+    ensure => present,
+    owner  => root,
+    group  => root,
+    mode   => '0644',
+    source => 'puppet:///modules/yumrepos/etc/pki/rpm-gpg/PERCONA-PACKAGING-KEY',
+  }
+
   yumrepo { 'percona':
     descr       => 'Percona',
     baseurl     => $percona_url,
@@ -25,7 +33,7 @@ class yumrepos::percona (
     includepkgs => $percona_includepkgs,
     exclude     => $percona_exclude,
     gpgcheck    => $percona_gpgcheck,
-    gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-percona',
+    gpgkey      => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-percona file:///etc/pki/rpm-gpg/PERCONA-PACKAGING-KEY',
     require     => File['/etc/pki/rpm-gpg/RPM-GPG-KEY-percona'],
   }
 }
