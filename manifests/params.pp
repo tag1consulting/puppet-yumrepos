@@ -37,6 +37,13 @@ class yumrepos::params {
   $elrepo_extras_includepkgs = absent
   $elrepo_extras_exclude = absent
 
+  #Docker CE
+  $docker_url = "https://download.docker.com/linux/centos/7/${::architecture}/stable"
+  $docker_enabled = '1'
+  $docker_gpgcheck = '1'
+  $docker_includepkgs = absent
+  #docker_exclude = absent
+
   # IUS Settings.
   $ius_url = "http://dl.iuscommunity.org/pub/ius/stable/${::operatingsystem}/${::operatingsystemmajrelease}/${::architecture}"
   $ius_enabled = '1'
