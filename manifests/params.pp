@@ -42,7 +42,7 @@ class yumrepos::params {
   $docker_enabled = '1'
   $docker_gpgcheck = '1'
   $docker_includepkgs = absent
-  #docker_exclude = absent
+  $docker_exclude = absent
 
   # IUS Settings.
   $ius_url = "http://dl.iuscommunity.org/pub/ius/stable/${::operatingsystem}/${::operatingsystemmajrelease}/${::architecture}"
