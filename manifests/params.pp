@@ -38,7 +38,7 @@ class yumrepos::params {
   $elrepo_extras_exclude = absent
 
   #Docker CE
-  $docker_url = "https://download.docker.com/linux/centos/7/${::architecture}/stable"
+  $docker_url = "https://download.docker.com/linux/centos/${::operatingsystemmajrelease}/${::architecture}/stable"
   $docker_enabled = '1'
   $docker_gpgcheck = '1'
   $docker_includepkgs = absent
