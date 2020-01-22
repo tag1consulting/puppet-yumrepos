@@ -12,7 +12,7 @@ class yumrepos::docker (
 ) inherits yumrepos::params {
 
   if ! defined(File['/etc/pki/rpm-gpg/RPM-GPG-KEY-Docker-CE']) {
-    file { '/etc/pki/rpm-gpg/':
+    file { '/etc/pki/rpm-gpg/RPM-GPG-KEY-Docker-CE':
       ensure => present,
       owner  => root,
       group  => root,
